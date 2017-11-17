@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script>
+        console.log(React);
+        console.log(ReactDOM);
+        function changeTime(){
+            setInterval(function () {
+                document.getElementById('time').innerHTML = new Date().toLocaleTimeString('en-US');
+            }, 1000);
+        }
+
+    </script>
+</head>
+<body onload="changeTime();">
+    <h1>Time Clocking</h1>
+    <h2><p>The current time is:<span id="time"></span></p> </h2>
+</body>
+</html>
